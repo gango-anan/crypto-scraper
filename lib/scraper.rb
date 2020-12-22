@@ -1,35 +1,37 @@
+# frozen_string_literal: true
+
 require 'nokogiri'
 require 'httparty'
 
+# This is a class designed to scrape CoinMarketCap
 class Scraper
-  attrib_reader: url
+  attr_reader :url
 
-  def initialize(url)
-    @url = url
+  def initialize(new_url)
+    @url = new_url
   end
 
   def scrape
-    url = 'https://coinmarketcap.com/'
-    unparsed_page = HTTParty.get(url)
-    parsed_page = Nokogiri::HTML(unparsed_page.body)
-    cryptos = Array.new
-    crypto_details = parsed_page.css('tbody > tr')
-    populate_crypto(crypto_details)
-  end
-
-  private
-  def populate_crypto(crypto_details)
-    10.times do |index|
-      crypto = {
-        name: crypto_details[index].css('div > p.sc-1eb5slv-0.iJjGCS').text,
-        price: crypto_details[index].css('div.price___3rj7O>a.cmc-link').text,
-        marketcap: crypto_details[index].css('td>p.sc-1eb5slv-0.kDEzev').text,
-        volume: crypto_details[index].css('p.sc-1eb5slv-0.etpvrL').text,
-        circulatingsupply: crypto_details[index].css('div>p.sc-1eb5slv-0.hNpJqV').text
-      }
-      cryptos << crypto
-    end
+    row_page = HTTParty.get(@url)
+    filtered_page = Nokogiri::HTML(row_page.body)
+    cryptos = []
+    crypto_details = filtered_page.css('tbody > tr')
+    populate_crypto(crypto_details, cryptos)
     cryptos
   end
 
+  private
+
+  def populate_crypto(crypto_details, cryptos)
+    crypto_details.each do |crypto_detail|
+      crypto = {
+        name: crypto_detail.css('div > p.sc-1eb5slv-0.iJjGCS').text,
+        price: crypto_detail.css('div.price___3rj7O>a.cmc-link').text,
+        marketcap: crypto_detail.css('td>p.sc-1eb5slv-0.kDEzev').text,
+        volume: crypto_detail.css('p.sc-1eb5slv-0.etpvrL').text,
+        circulatingsupply: crypto_detail.css('div>p.sc-1eb5slv-0.hNpJqV').text
+      }
+      cryptos << crypto
+    end
+  end
 end
