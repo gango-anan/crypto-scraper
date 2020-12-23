@@ -1,3 +1,5 @@
+#!/usr/bin/env ruby
+
 require 'csv'
 require_relative '../lib/scraper'
 
