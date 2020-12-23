@@ -35,6 +35,10 @@ cd crypto-scraper
 bin/main.rb
 - Open scrape.csv file crypto-scraper in using any spreadsheet application such as MS Excel for windows platform and OpenOffice Spreadsheet for linux platforms.
 
+## Run Test
+- Open your terminal and run the following test command to test the application
+rspec --format documentation
+
 
 ## Author
 
