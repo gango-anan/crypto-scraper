@@ -13,7 +13,7 @@ class Scraper
     row_page = HTTParty.get(@url)
     filtered_page = Nokogiri::HTML(row_page.body)
     cryptos = []
-    crypto_details = filtered_page.css('tbody > tr')
+    crypto_details = filtered_page.css('tbody tr:not([class])')
     populate_crypto(crypto_details, cryptos)
     cryptos
   end
