@@ -1,7 +1,5 @@
 #!/usr/bin/env ruby
 
-# frozen_string_literal: true
-
 require 'csv'
 require_relative '../lib/scraper'
 
