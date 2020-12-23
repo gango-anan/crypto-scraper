@@ -6,8 +6,7 @@
 for data on the top 10 most traded crypto currencies. I choose to create design crypto scrape because am a cryptocurrency ethusiast and do trade in cryptocurrency 
 trading during my free time soo a tool that helps give me updates on how a given cryptocurrency is performing is handy to me.
 
-![screenshot](./app_screenshot.png)
-
+## Additional description about the project and its features.
 - This tool scrapes coinmarket cap and returns the upto date details of a crypto name, the price, the volume, market cap and the circulating volume.
 - The tool is customized to give details of the top 10 highly traded crypto currencies.
 - After scrapping, the tool generates a CSV file with the required data
