@@ -20,19 +20,20 @@ trading during my free time soo a tool that helps give me updates on how a given
 ## Getting Started
 Install all the required dependecies by following these simple instructions:
 - To run Crypto Scrape, make sure you have a internet connection
-- Install the most recent version of ruby by going to your terminal and type: gem install ruby
-- Install the required libraries nokogiri and httparty, from the terminal by typing: gem install nokogiri and gem install httparty, respectively or simply going to your terminal and type: bundle install
+- Install the most recent version of ruby by typing the following command in your terminal:
+gem install ruby
+- Install the required libraries by typing the following command in your terminal:
+bundle install
 
-## Setup
+## Setup and run the application
 To get a local copy up and running follow these simple example steps.
-- Create a directoring on your local machine and navigate to that directory
-- Launch your web browser and follow this link [Crpto Scrape](https://github.com/gango-anan/crypto-scraper/tree/develop)
-- Click on code and chose the DOWNLOAD Zip option
-- Unzip the fles to the directory you created on your local machine
-- From your terminal, navigate to the directory with containing the unzipped project files
-- Run the application by typing: bin/main.rb
-- The application will run and after running it will generate a scrape.csv file in your application directory
-- Open scrape.csv file using any spreadsheet application such as MS Excel for windows platform and OpenOffice Spreadsheet for linux platforms.
+- Clone the repository by typing the following command in your terminal
+git clone https://github.com/gango-anan/crypto-scraper.git
+- Change directory by typing the following command in your terminal
+cd crypto-scraper
+- Run the program by typing the following command in your terminal
+bin/main.rb
+- Open scrape.csv file crypto-scraper in using any spreadsheet application such as MS Excel for windows platform and OpenOffice Spreadsheet for linux platforms.
 
 
 ## Author
