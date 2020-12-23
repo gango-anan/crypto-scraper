@@ -19,10 +19,11 @@ trading during my free time soo a tool that helps give me updates on how a given
 
 ## Getting Started
 Install all the required dependecies by following these simple instructions:
-- To run Crypto Scrape make sure you have a internet connection
+- To run Crypto Scrape, make sure you have a internet connection
 - Install the most recent version of ruby by going to your terminal and type: gem install ruby
-- Install the required libraries nokogiri and httparty, from the terminal by typing: gem install nokogiri and gem install httparty, respectively.
+- Install the required libraries nokogiri and httparty, from the terminal by typing: gem install nokogiri and gem install httparty, respectively or simply going to your terminal and type: bundle install
 
+## Setup
 To get a local copy up and running follow these simple example steps.
 - Create a directoring on your local machine and navigate to that directory
 - Launch your web browser and follow this link [Crpto Scrape](https://github.com/gango-anan/crypto-scraper/tree/develop)
